@@ -21,8 +21,7 @@ plt.show()"""
 # -------------------------------------------------------
 
 
-
-import numpy as np
+# ------------- Analyze 2 - Processed Values -------------
 def moving_average(x, w):
     return np.convolve(x, np.ones(w), 'valid') / w
 
@@ -30,12 +29,12 @@ lista = list()
 lista_media = list()
 lista_aux = list()
 cont = 0
-palavra =  'recompensa'
-#palavra =  'angulo'
-#palavra =  'vel_ang'
-#palavra =  'Distancia ponto-otimo'
-#palavra =  'Distancia ponto-ponto'
-#palavra =  'Distancia ponto-pfora'
+palavra =  'recompensa'            # Reward
+#palavra =  'angulo'                # Angle
+#palavra =  'vel_ang'               # Angle variation
+#palavra =  'Distancia ponto-otimo' # Close and Long distances
+#palavra =  'Distancia ponto-ponto' # Close distances
+#palavra =  'Distancia ponto-pfora' # Long distances
 
 
 with open("./slurm.1424725.txt") as dados:
@@ -186,3 +185,4 @@ plt.legend()
 #plt.grid()
 
 plt.show()
+# -------------------------------------------------------
